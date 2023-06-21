@@ -3,6 +3,7 @@ package crudOperations;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import crudOperations.user.User;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -46,7 +47,7 @@ public class CRUDMethods {
                 .build();
 
         HttpResponse<?> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
-        return response.statusCode()==201?"crudOperations.User created":"Something wrong...";
+        return response.statusCode()==201?"crudOperations.user.User created":"Something wrong...";
     }
 
 
@@ -92,7 +93,7 @@ public String deleteUser(String URL, int userId) throws IOException, Interrupted
             .DELETE()
             .build();
     HttpResponse<?> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
-    return response.statusCode()==201?"crudOperations.User deleted":"Something wrong...";
+    return response.statusCode()==201?"crudOperations.user.User deleted":"Something wrong...";
 }
 
 }

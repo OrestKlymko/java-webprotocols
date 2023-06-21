@@ -1,5 +1,10 @@
 package crudOperations;
 
+import crudOperations.user.Address;
+import crudOperations.user.Company;
+import crudOperations.user.Geo;
+import crudOperations.user.User;
+
 import java.io.IOException;
 
 
